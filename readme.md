@@ -6,4 +6,4 @@ Non-Windows users who needs to put files to CyberArk Vault (SIM) cannot do this 
 
 ## How to use it?
 
-Replace the values of {host}, {safe-name}, {username} & {password} with a relevant ones (you may want to change the folder_path's value too) and run it.
+Replace the values of {cyberark-sfe-address}, {safe-name}, {username} & {password} with a relevant ones (you may want to change the folder_path's value too) and run it.
