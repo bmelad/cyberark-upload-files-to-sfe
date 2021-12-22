@@ -20,7 +20,6 @@
     }
 
     function login($user, $pass) {
-
         global $base_url, $session_id;
         $url = $base_url.'WebServices/auth/Cyberark/CyberArkAuthenticationService.svc/Logon';
         $payload = array('username' => $user, 'password' => $pass);
@@ -50,8 +49,7 @@
         return post($url, "Content-Type: application/json\r\nAuthorization: $session_id\r\n", json_encode($payload))['status'] == '200';
     }
 
-    function error_handler($errno, $errstr, $errfile, $errline)
-    {
+    function error_handler($errno, $errstr, $errfile, $errline) {
         if (strpos($errstr, 'SSL') !== false) echo 'SSL Error, you may try to set the \'ignore_ssl_issues\' flag to true...'."\r\n";
         return true;
     }
